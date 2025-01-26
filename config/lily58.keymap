@@ -21,7 +21,7 @@
 
             display-name = "Lower";
             bindings = <
-&trans         &kp F1  &kp F2  &kp F3     &kp F4     &kp F5                                               &kp F6          &kp F7          &kp F8        &kp F9     &kp F10        &trans
+&to 1          &kp F1  &kp F2  &kp F3     &kp F4     &kp F5                                               &kp F6          &kp F7          &kp F8        &kp F9     &kp F10        &trans
 &trans         &trans  &trans  &trans     &trans     &trans                                               &trans          &trans          &trans        &trans     &trans         &trans
 &trans         &trans  &trans  &trans     &kp LC(F)  &trans                                               &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &trans         &trans
 &kp LS(LCTRL)  &trans  &trans  &kp LC(C)  &kp LC(V)  &trans        &kp LEFT_BRACKET    &kp RIGHT_BRACKET  &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END    &kp BACKSLASH  &trans
@@ -61,7 +61,7 @@
 
             display-name = "Raise";
             bindings = <
-&trans  &trans  &trans  &trans   &trans  &trans                                           &kp C_BRI_DEC   &kp C_BRI_UP    &kp K_MUTE    &kp C_VOL_DN  &kp C_VOLUME_UP  &trans
+&to 1   &trans  &trans  &trans   &trans  &trans                                           &kp C_BRI_DEC   &kp C_BRI_UP    &kp K_MUTE    &kp C_VOL_DN  &kp C_VOLUME_UP  &trans
 &trans  &trans  &trans  &kp DEL  &trans  &trans                                           &trans          &trans          &kp INS       &trans        &trans           &trans
 &trans  &trans  &trans  &trans   &trans  &trans                                           &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT     &trans           &trans
 &trans  &trans  &trans  &trans   &trans  &trans        &kp LEFT_BRACE    &kp RIGHT_BRACE  &trans          &trans          &trans        &trans        &kp PIPE         &trans
