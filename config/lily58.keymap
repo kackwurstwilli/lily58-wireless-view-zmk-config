@@ -21,7 +21,7 @@
 
             display-name = "Lower";
             bindings = <
-&to 1          &kp F1  &kp F2  &kp F3     &kp F4     &kp F5                                               &kp F6          &kp F7          &kp F8        &kp F9     &kp F10        &trans
+&sys_reset     &kp F1  &kp F2  &kp F3     &kp F4     &kp F5                                               &kp F6          &kp F7          &kp F8        &kp F9     &kp F10        &trans
 &trans         &trans  &trans  &trans     &trans     &trans                                               &trans          &trans          &trans        &trans     &trans         &trans
 &trans         &trans  &trans  &trans     &kp LC(F)  &trans                                               &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &trans         &trans
 &kp LS(LCTRL)  &trans  &trans  &kp LC(C)  &kp LC(V)  &trans        &kp LEFT_BRACKET    &kp RIGHT_BRACKET  &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END    &kp BACKSLASH  &trans
