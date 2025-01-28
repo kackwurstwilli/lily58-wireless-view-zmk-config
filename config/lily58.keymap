@@ -12,26 +12,6 @@
     keymap {
         compatible = "zmk,keymap";
 
-        layerLeft {
-            // ------------------------------------------------------------------------------------------------------------
-            // | BTCLR | BT1 | BT2 |  BT3 |  BT4 |  BT5 |                   |      |       |       |      |       |       |
-            // |  F1   |  F2 |  F3 |  F4  |  F5  |  F6  |                   |  F7  |  F8   |  F9   |  F10 |  F11  |  F12  |
-            // |   `   |  !  |  @  |  #   |  $   |  %   |                   |  ^   |  &    |  *    |  (   |   )   |   ~   |
-            // |       |     |     |      |      |      |        |  |       |      |  _    |  +    |  {   |   }   |  "|"  |
-            //                     |      |      |      |        |  |       |      |       |       |
-
-            display-name = "lower";
-            bindings = <
-&trans         &kp F1  &kp F2  &kp F3     &kp F4     &kp F5                                               &kp F6          &kp F7          &kp F8        &kp F9     &kp F10        &to 1
-&trans         &trans  &trans  &trans     &trans     &trans                                               &trans          &trans          &trans        &trans     &trans         &trans
-&trans         &trans  &trans  &trans     &kp LC(F)  &trans                                               &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &trans         &trans
-&kp LS(LCTRL)  &trans  &trans  &kp LC(C)  &kp LC(V)  &trans        &kp LEFT_BRACKET    &kp RIGHT_BRACKET  &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END    &kp BACKSLASH  &trans
-                               &none      &trans     &kp LEFT_WIN  &trans              &trans             &kp RIGHT_WIN   &trans          &none
-            >;
-
-            label = "lower";
-        };
-
         base {
             // ------------------------------------------------------------------------------------------------------------
             // |  ESC  |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |   `   |
@@ -46,10 +26,30 @@
 &kp TAB           &kp Q   &kp W   &kp E   &kp R         &kp T                                                     &kp Y      &kp U          &kp I      &kp O    &kp P     &kp MINUS
 &kp LEFT_CONTROL  &kp A   &kp S   &kp D   &kp F         &kp G                                                     &kp H      &kp J          &kp K      &kp L    &kp SEMI  &kp SQT
 &kp LEFT_SHIFT    &kp Z   &kp X   &kp C   &kp V         &kp B      &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &kp N      &kp M          &kp COMMA  &kp DOT  &kp FSLH  &kp EQUAL
-                                  &mo 0   &kp LEFT_ALT  &kp SPACE  &kp BACKSPACE           &kp RET                &kp SPACE  &kp RIGHT_ALT  &mo 2
+                                  &mo 1   &kp LEFT_ALT  &kp SPACE  &kp BACKSPACE           &kp RET                &kp SPACE  &kp RIGHT_ALT  &mo 2
             >;
 
-            label = "base";
+            label = "Base";
+        };
+
+        layerLeft {
+            // ------------------------------------------------------------------------------------------------------------
+            // | BTCLR | BT1 | BT2 |  BT3 |  BT4 |  BT5 |                   |      |       |       |      |       |       |
+            // |  F1   |  F2 |  F3 |  F4  |  F5  |  F6  |                   |  F7  |  F8   |  F9   |  F10 |  F11  |  F12  |
+            // |   `   |  !  |  @  |  #   |  $   |  %   |                   |  ^   |  &    |  *    |  (   |   )   |   ~   |
+            // |       |     |     |      |      |      |        |  |       |      |  _    |  +    |  {   |   }   |  "|"  |
+            //                     |      |      |      |        |  |       |      |       |       |
+
+            display-name = "lower";
+            bindings = <
+&trans         &kp F1  &kp F2  &kp F3     &kp F4     &kp F5                                               &kp F6          &kp F7          &kp F8        &kp F9     &kp F10        &to 0
+&trans         &trans  &trans  &trans     &trans     &trans                                               &trans          &trans          &trans        &trans     &trans         &trans
+&trans         &trans  &trans  &trans     &kp LC(F)  &trans                                               &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &trans         &trans
+&kp LS(LCTRL)  &trans  &trans  &kp LC(C)  &kp LC(V)  &trans        &kp LEFT_BRACKET    &kp RIGHT_BRACKET  &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END    &kp BACKSLASH  &trans
+                               &none      &trans     &kp LEFT_WIN  &trans              &trans             &kp RIGHT_WIN   &trans          &none
+            >;
+
+            label = "Lower";
         };
 
         layerRight {
@@ -62,14 +62,14 @@
 
             display-name = "LayerRight";
             bindings = <
-&bt BT_CLR_ALL  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                                     &kp C_BRI_DEC   &kp C_BRI_UP    &kp K_MUTE    &kp C_VOL_DN  &kp C_VOLUME_UP  &to 1
+&bt BT_CLR_ALL  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                                     &kp C_BRI_DEC   &kp C_BRI_UP    &kp K_MUTE    &kp C_VOL_DN  &kp C_VOLUME_UP  &to 0
 &trans          &trans        &trans        &kp DEL       &trans        &bt BT_CLR                                       &trans          &trans          &kp INS       &trans        &trans           &trans
 &trans          &trans        &trans        &trans        &trans        &trans                                           &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT     &trans           &trans
 &trans          &trans        &trans        &trans        &trans        &trans        &kp LEFT_BRACE    &kp RIGHT_BRACE  &trans          &trans          &trans        &trans        &kp PIPE         &trans
                                             &none         &trans        &kp LEFT_WIN  &trans            &trans           &kp RCTRL       &trans          &none
             >;
 
-            label = "raise";
+            label = "Raise";
         };
 
         layer_3 {
@@ -83,6 +83,16 @@
         };
 
         layer_4 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
+            >;
+        };
+
+        layer_5 {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
