@@ -32,7 +32,7 @@
             label = "Base";
         };
 
-        raise_layer {
+        layerLeft {
             // ------------------------------------------------------------------------------------------------------------
             // | BTCLR | BT1 | BT2 |  BT3 |  BT4 |  BT5 |                   |      |       |       |      |       |       |
             // |  F1   |  F2 |  F3 |  F4  |  F5  |  F6  |                   |  F7  |  F8   |  F9   |  F10 |  F11  |  F12  |
@@ -42,14 +42,14 @@
 
             display-name = "lower";
             bindings = <
-&trans         &kp F1  &kp F2  &kp F3     &kp F4     &kp F5                                               &kp F6          &kp F7          &kp F8        &kp F9     &kp F10        &to 0
-&trans         &trans  &trans  &trans     &trans     &trans                                               &trans          &trans          &trans        &trans     &trans         &trans
-&trans         &trans  &trans  &trans     &kp LC(F)  &trans                                               &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &trans         &trans
-&kp LS(LCTRL)  &trans  &trans  &kp LC(C)  &kp LC(V)  &trans        &kp LEFT_BRACKET    &kp RIGHT_BRACKET  &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END    &kp BACKSLASH  &trans
-                               &none      &trans     &kp LEFT_WIN  &trans              &trans             &kp RIGHT_WIN   &trans          &none
+&studio_unlock  &kp F1  &kp F2  &kp F3     &kp F4     &kp F5                                               &kp F6          &kp F7          &kp F8        &kp F9     &kp F10        &to 0
+&trans          &trans  &trans  &trans     &trans     &trans                                               &trans          &trans          &trans        &trans     &trans         &trans
+&trans          &trans  &trans  &trans     &kp LC(F)  &trans                                               &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &trans         &trans
+&kp LS(LCTRL)   &trans  &trans  &kp LC(C)  &kp LC(V)  &trans        &kp LEFT_BRACKET    &kp RIGHT_BRACKET  &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END    &kp BACKSLASH  &trans
+                                &none      &trans     &kp LEFT_WIN  &trans              &trans             &kp RIGHT_WIN   &trans          &none
             >;
 
-            label = "Raise";
+            label = "Lower";
         };
 
         lower_layer {
